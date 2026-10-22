@@ -26,12 +26,13 @@ target_industry = st.sidebar.selectbox(
     ["FMCG & Dry Foods", "E-Commerce Logistics", "Pharmaceuticals", "Cosmetics & Personal Care"]
 )
 
-production_volume = st.sidebar.slider(
+# Replaced slider with direct typing box
+production_volume = st.sidebar.number_input(
     "Annual Packaging Units Required",
-    min_value=100_000,
-    max_value=10_000_000,
+    min_value=10_000,
+    max_value=100_000_000,
     value=1_500_000,
-    step=100_000
+    step=50_000
 )
 
 barrier_requirement = st.sidebar.select_slider(
